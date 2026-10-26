@@ -1,7 +1,7 @@
 name: astrbot_plugin_mcstatus
 display_name: 澄月服务器状态
 desc: GTO 在线查询和离线通知
-version: 0.1.0
+version: 0.2.0
 author: rokidna
 support_platforms:
   - qq_official
