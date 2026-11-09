@@ -7,7 +7,7 @@ from astrbot.api.star import Context, Star, register
 from mcstatus import JavaServer
 
 HOST = "10.10.10.3"
-PORT = 25564
+PORT = 25565
 STATUS_TIMEOUT = 2.0
 QUERY_TIMEOUT = 1.0
 POLL_INTERVAL = 20
