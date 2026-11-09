@@ -1,0 +1,36 @@
+{
+  "host": {
+    "description": "Minecraft 服务器地址",
+    "type": "string",
+    "default": "10.10.10.3",
+    "hint": "内网 IP 或域名，插件所在机器需能直连"
+  },
+  "ports": {
+    "description": "候选端口",
+    "type": "string",
+    "default": "25565,25564",
+    "hint": "逗号分隔，按顺序尝试，第一个能连通会被记住"
+  },
+  "poll_interval": {
+    "description": "轮询间隔（秒）",
+    "type": "int",
+    "default": 20,
+    "hint": "后台采样的周期，最小 5"
+  },
+  "fail_threshold": {
+    "description": "连续失败次数阈值",
+    "type": "int",
+    "default": 2,
+    "hint": "达到后判定离线并推送通知"
+  },
+  "status_timeout": {
+    "description": "状态探测超时（秒）",
+    "type": "float",
+    "default": 2.0
+  },
+  "query_timeout": {
+    "description": "玩家名单查询超时（秒）",
+    "type": "float",
+    "default": 1.0
+  }
+}
