@@ -1,32 +1,27 @@
 {
-  "host": {
-    "description": "Minecraft 服务器地址",
+  "routes": {
+    "description": "探测线路",
     "type": "string",
-    "default": "10.10.10.3",
-    "hint": "内网 IP 或域名，插件所在机器需能直连"
-  },
-  "ports": {
-    "description": "候选端口",
-    "type": "string",
-    "default": "25565,25564",
-    "hint": "逗号分隔，按顺序尝试，第一个能连通会被记住"
+    "default": "10.10.10.3:25565,10.10.10.3:25564,line1.mc.gnetwork.space:25565,line2.mc.gnetwork.space:25565,line3.mc.gnetwork.space:25565",
+    "hint": "host:port 逗号分隔，按顺序尝试；成功的线路优先复用，断了自动切下一条"
   },
   "poll_interval": {
     "description": "轮询间隔（秒）",
     "type": "int",
     "default": 20,
-    "hint": "后台采样的周期，最小 5"
+    "hint": "后台采样周期，最小 5"
   },
   "fail_threshold": {
     "description": "连续失败次数阈值",
     "type": "int",
     "default": 2,
-    "hint": "达到后判定离线并推送通知"
+    "hint": "所有线路都失败达到该次数后判定离线并推送通知"
   },
   "status_timeout": {
-    "description": "状态探测超时（秒）",
+    "description": "单条线路状态探测超时（秒）",
     "type": "float",
-    "default": 2.0
+    "default": 2.0,
+    "hint": "线路越多，最坏耗时 = 线路数 × 该值"
   },
   "query_timeout": {
     "description": "玩家名单查询超时（秒）",
